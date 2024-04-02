@@ -1,19 +1,36 @@
-.input {
-  background: #f2f2f2;
+.Form input {
+  background: #b1b1b1;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 700;
 }
   
 .formField {
   margin: 10px 0 10px 0;
-  min-width: 500px;
+  min-width: 400px;
   padding: 15px;
   font-size: 16px;
   border: 0;
   font-family: "Roboto", sans-serif;
 }
+
+.formField:focus{
+  outline: none;
+}
+
 .formButton {
   margin: 10px 0 10px 0;
-  padding: 15px;
-  font-size: 16px;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
   border: 0;
-  font-family: "Roboto", sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #056408;
+  /* background-image: linear-gradient(to right, #15425f, #056408); */
+  /* -webkit-background-clip: text;
+  background-clip: text; */
+  border-radius: 15px;
+  background: #060f14;
 }

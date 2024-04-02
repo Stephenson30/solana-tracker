@@ -3,7 +3,7 @@
 }
 
 .AppHeader {
-  background-color: #282c34;
+  background: linear-gradient(45deg, #243021, #322b42);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,4 +11,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.AppHeader h1{
+  color: transparent;
+  background-image: linear-gradient(to right, #3498db, #07bc0c);
+  -webkit-background-clip: text;
+  background-clip: text;
+
+}
+
+.AppHeader p{
+  font-size: .9rem;
 }
