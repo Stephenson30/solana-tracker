@@ -19,25 +19,22 @@ const Home: NextPage = () => {
     }
 
     try {
-      
       const key = new web3.PublicKey(address);
       setAddress(key.toBase58());
 
       const connection = new web3.Connection(web3.clusterApiUrl("devnet"));
 
-      
       connection.getBalance(key).then((balance) => {
         setBalance(balance / web3.LAMPORTS_PER_SOL);
       });
-      
-      connection.getAccountInfo(key).then((exc:any) => {
-        setIsExecutable( exc.executable?"Yes":"Nope")
-      });
 
+      connection.getAccountInfo(key).then((exc: any) => {
+        setIsExecutable(exc.executable ? "Yes" : "Nope");
+      });
     } catch (error) {
       setAddress("");
       setBalance(0);
-      alert("invalid address")
+      alert("invalid address");
       console.log(error);
     }
   };
@@ -45,11 +42,13 @@ const Home: NextPage = () => {
   return (
     <div className={styles.App}>
       <header className={styles.AppHeader}>
-        <h1>Fetch Solana Accounts Devnet Balance</h1>
+        <h1>Fetch Sol Devnet Balance</h1>
         <AddressForm handler={addressSubmittedHandler} />
-        <p>{`Address: ${address}`}</p>
-        <p>{`Balance: ${balance} SOL`}</p>
-        <p>Is it executable? {isExecutable}</p>
+        <div className={styles.pdiv}>
+          {/* <p className={styles.p}>{`Address: ${address}`}</p> */}
+          <p>Balance:<span style={{color:"#07bc0c"}}>{`${" "}${balance} SOL`}</span></p>
+          <p>Is it executable? <span style={{color:"#07bc0c"}}> {isExecutable}</span></p>
+        </div>
       </header>
     </div>
   );

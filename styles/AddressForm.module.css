@@ -1,7 +1,11 @@
+.Form{
+  width: 100%;
+}
+
 .Form input {
   background: #b1b1b1;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 15px;
   font-size: 1rem;
   font-weight: 700;
@@ -9,7 +13,7 @@
   
 .formField {
   margin: 10px 0 10px 0;
-  min-width: 400px;
+  /* min-width: 400px; */
   padding: 15px;
   font-size: 16px;
   border: 0;
@@ -21,16 +25,14 @@
 }
 
 .formButton {
-  margin: 10px 0 10px 0;
+  /* margin: 10px 0 10px 0; */
   padding: 1.5rem 2rem;
   font-size: 1rem;
   font-weight: 700;
   border: 0;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #056408;
-  /* background-image: linear-gradient(to right, #15425f, #056408); */
-  /* -webkit-background-clip: text;
-  background-clip: text; */
+  margin: 2rem 0;
   border-radius: 15px;
   background: #060f14;
 }
